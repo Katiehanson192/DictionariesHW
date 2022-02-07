@@ -1,13 +1,8 @@
-from cgi import test
-
-
 Room_number= {'CS101':'3004',
              'CS102':'4501',
              'CS103':'6755', 
              'NT110': '1244',
              'CM241': '1411'}
-
-
 
 
 Instructor= {'CS101':'Haynes',
@@ -40,14 +35,13 @@ else:
 
 codes= {'A':'!','a': '@','B': '#','b': '$','C': '%','c': '^','D': '&','d': '*','E': '(','e': ')','F': '-','f': '_','G': '+','g': '=','H': '~','h': '`','I': '1','i': '2','J': '3','j': '4','K': '5','k': '6','L': '7','l': '8','M': '9','m': '0','N': 'Q','n': 'W','O': 'E','o': 'R','P': 'T','p': 'Y','Q': 'U','q': 'I','R': 'O','r': 'P','S': '[','s': ']','T': '{','t': '}','U': 'A','u': 'S','V': 'D','v': 'F','W': 'G','w': 'H','X': 'J','x': 'K','Y': 'L','y': 'C','Z': 'M','z': 'N'}
 
-test ={'T':'!'}
 
 #read the file
-security = open('info_security.txt','r'
+security = open('info_security.txt','r')
 
 
 words = security.read()
-words = str(security)
+
 
 security.close()
 
@@ -57,8 +51,8 @@ outfile = open("info_security_outfile.txt", "w")
 
 #encryption
 for letter in words:
-    if letter in test:
-        encrypt = test[letter]
+    if letter in codes:
+        encrypt = codes[letter]
     
         outfile.write(encrypt)
     else: 
